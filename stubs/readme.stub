@@ -1,0 +1,29 @@
+# {{Name}}
+
+Módulo {{Name}}.
+
+As rotas usam o canal `api`. O prefixo e o middleware do canal vêm de `routing.api`. Dentro do arquivo de rotas, o grupo usa `{{RouteMiddleware}}`. O parâmetro de rota é `{{singularCamel}}`.
+
+Listagens aceitam `where[{{PrimaryKey}}]`, `sort[column]`, `sort[order]` e `page`. A lista responde `data` e `paginate`. Um registro responde `data`. `DELETE` responde `204`.
+
+## Endpoints
+
+### `GET /{{pluralSlugName}}`
+
+Lista os registros.
+
+### `POST /{{pluralSlugName}}`
+
+Cria um registro. O corpo é o validado por `StoreRequest`. A resposta é o resource.
+
+### `GET /{{pluralSlugName}}/{{{singularCamel}}}`
+
+Retorna um registro.
+
+### `PUT|PATCH /{{pluralSlugName}}/{{{singularCamel}}}`
+
+Atualiza um registro. O corpo é o validado por `UpdateRequest`.
+
+### `DELETE /{{pluralSlugName}}/{{{singularCamel}}}`
+
+Remove o registro.

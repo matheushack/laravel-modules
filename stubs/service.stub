@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+namespace {{ServicesNamespace}};
+
+use {{FiltersNamespace}}\{{Class}}Filter;
+use {{RequestsNamespace}}\StoreRequest;
+use {{RequestsNamespace}}\UpdateRequest;
+use {{ModelsNamespace}}\{{Class}};
+use {{RepositoriesNamespace}}\{{Class}}Repository;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Http\Request;
+
+class {{Class}}Service
+{
+    /**
+     * @param {{Class}}Repository $repository
+     */
+    public function __construct(protected {{Class}}Repository $repository)
+    {
+    }
+
+    /**
+     * @param Request $request
+     * @return LengthAwarePaginator
+     */
+    public function index(Request $request): LengthAwarePaginator
+    {
+        return (new {{Class}}Filter($this->repository->query()))
+            ->loads([])
+            ->enablePaginate()
+            ->enableSort()
+            ->apply($request);
+    }
+
+    /**
+     * @param StoreRequest $request
+     * @return {{Class}}
+     */
+    public function store(StoreRequest $request): {{Class}}
+    {
+        return $this->repository->create($request->validated());
+    }
+
+    /**
+     * @param {{Class}} $model
+     * @return {{Class}}
+     */
+    public function show({{Class}} $model): {{Class}}
+    {
+        return $model->load([]);
+    }
+
+    /**
+     * @param UpdateRequest $request
+     * @param {{Class}} $model
+     * @return {{Class}}
+     */
+    public function update(UpdateRequest $request, {{Class}} $model): {{Class}}
+    {
+        return $this->repository->update($model, $request->validated());
+    }
+
+    /**
+     * @param {{Class}} $model
+     * @return void
+     */
+    public function destroy({{Class}} $model): void
+    {
+        $this->repository->delete($model);
+    }
+}

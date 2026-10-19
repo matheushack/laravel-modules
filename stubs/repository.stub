@@ -1,0 +1,17 @@
+<?php
+declare(strict_types=1);
+
+namespace {{RepositoriesNamespace}};
+
+use {{ModelsNamespace}}\{{Class}};
+
+class {{Class}}Repository extends \{{BaseRepository}}
+{
+    /**
+     * @return class-string<{{Class}}>
+     */
+    protected function model(): string
+    {
+        return {{Class}}::class;
+    }
+}

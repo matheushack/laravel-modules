@@ -1,0 +1,70 @@
+<?php
+declare(strict_types=1);
+
+namespace {{ControllersNamespace}};
+
+use {{RequestsNamespace}}\StoreRequest;
+use {{RequestsNamespace}}\UpdateRequest;
+use {{ResourcesNamespace}}\{{Class}}Resource;
+use {{ModelsNamespace}}\{{Class}};
+use {{ServicesNamespace}}\{{Class}}Service;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+class {{Class}}Controller extends \{{BaseController}}
+{
+    /**
+     * @param {{Class}}Service $service
+     */
+    public function __construct(protected {{Class}}Service $service)
+    {
+    }
+
+    /**
+     * @param Request $request
+     * @return array<string, mixed>
+     */
+    public function index(Request $request): array
+    {
+        return {{Class}}Resource::collection($this->service->index($request));
+    }
+
+    /**
+     * @param StoreRequest $request
+     * @return {{Class}}Resource
+     */
+    public function store(StoreRequest $request): {{Class}}Resource
+    {
+        return {{Class}}Resource::make($this->service->store($request));
+    }
+
+    /**
+     * @param {{Class}} ${{singularCamel}}
+     * @return {{Class}}Resource
+     */
+    public function show({{Class}} ${{singularCamel}}): {{Class}}Resource
+    {
+        return {{Class}}Resource::make($this->service->show(${{singularCamel}}));
+    }
+
+    /**
+     * @param UpdateRequest $request
+     * @param {{Class}} ${{singularCamel}}
+     * @return {{Class}}Resource
+     */
+    public function update(UpdateRequest $request, {{Class}} ${{singularCamel}}): {{Class}}Resource
+    {
+        return {{Class}}Resource::make($this->service->update($request, ${{singularCamel}}));
+    }
+
+    /**
+     * @param {{Class}} ${{singularCamel}}
+     * @return Response
+     */
+    public function destroy({{Class}} ${{singularCamel}}): Response
+    {
+        $this->service->destroy(${{singularCamel}});
+
+        return response()->noContent();
+    }
+}

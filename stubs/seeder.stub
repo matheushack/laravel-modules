@@ -1,0 +1,16 @@
+<?php
+declare(strict_types=1);
+
+namespace {{SeedersNamespace}};
+
+use Illuminate\Database\Seeder;
+
+class {{Class}}Seeder extends Seeder
+{
+    /**
+     * @return void
+     */
+    public function run(): void
+    {
+    }
+}

@@ -1,0 +1,9 @@
+<?php
+declare(strict_types=1);
+
+namespace {{EnumsNamespace}};
+
+enum {{Class}}: string
+{
+    case Example = 'example';
+}

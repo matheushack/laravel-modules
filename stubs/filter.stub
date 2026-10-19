@@ -1,0 +1,17 @@
+<?php
+declare(strict_types=1);
+
+namespace {{FiltersNamespace}};
+
+class {{Class}}Filter extends \{{BaseFilter}} implements \{{FilterContract}}
+{
+    /**
+     * @return array<string, class-string>
+     */
+    protected function filterable(): array
+    {
+        return [
+            '{{PrimaryKey}}' => \{{ExactFilter}}::class,
+        ];
+    }
+}

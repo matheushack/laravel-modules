@@ -1,0 +1,8 @@
+<?php
+
+use {{ControllersNamespace}}\{{Class}}Controller;
+use Illuminate\Support\Facades\Route;
+
+Route::controller({{Class}}Controller::class)->group(function () {
+    Route::get('{{pluralSlugName}}', 'index');
+});

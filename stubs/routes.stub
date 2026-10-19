@@ -1,0 +1,12 @@
+<?php
+
+use {{ControllersNamespace}}\{{Class}}Controller;
+use Illuminate\Support\Facades\Route;
+
+Route::middleware('{{RouteMiddleware}}')->controller({{Class}}Controller::class)->group(function () {
+    Route::get('{{pluralSlugName}}', 'index');
+    Route::post('{{pluralSlugName}}', 'store');
+    Route::get('{{pluralSlugName}}/{{{singularCamel}}}', 'show');
+    Route::match(['put', 'patch'], '{{pluralSlugName}}/{{{singularCamel}}}', 'update');
+    Route::delete('{{pluralSlugName}}/{{{singularCamel}}}', 'destroy');
+});

@@ -1,0 +1,8 @@
+<?php
+declare(strict_types=1);
+
+namespace {{ProviderNamespace}};
+
+class {{Class}}ServiceProvider extends \{{ModuleProvider}}
+{
+}

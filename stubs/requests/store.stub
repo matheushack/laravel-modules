@@ -1,0 +1,17 @@
+<?php
+declare(strict_types=1);
+
+namespace {{RequestsNamespace}};
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class {{Class}} extends FormRequest
+{
+    /**
+     * @return array<string, mixed>
+     */
+    public function rules(): array
+    {
+        return [];
+    }
+}
