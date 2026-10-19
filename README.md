@@ -1,11 +1,11 @@
 # Laravel Modules
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/matheushack/laravel-modules.svg?style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
-[![Total Downloads](https://img.shields.io/packagist/dt/matheushack/laravel-modules.svg?style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/matheushack/laravel-modules.svg?style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
-[![PHP Version](https://img.shields.io/packagist/php-v/matheushack/laravel-modules.svg?style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
+[![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Frepo.packagist.org%2Fp2%2Fmatheushack%2Flaravel-modules.json&query=%24.packages%5B%22matheushack%2Flaravel-modules%22%5D%5B0%5D.version&label=version&color=blue&style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpackagist.org%2Fpackages%2Fmatheushack%2Flaravel-modules%2Fstats.json&query=%24.downloads.total&label=downloads&color=brightgreen&style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
+[![Monthly Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpackagist.org%2Fpackages%2Fmatheushack%2Flaravel-modules%2Fstats.json&query=%24.downloads.monthly&label=downloads%2Fmonth&color=brightgreen&style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
+[![PHP Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Frepo.packagist.org%2Fp2%2Fmatheushack%2Flaravel-modules.json&query=%24.packages%5B%22matheushack%2Flaravel-modules%22%5D%5B0%5D.require.php&label=php&logo=php&logoColor=white&color=777BB4&style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
 [![Laravel](https://img.shields.io/badge/laravel-11%20%7C%2012-FF2D20?style=flat-square&logo=laravel&logoColor=white)](https://packagist.org/packages/matheushack/laravel-modules)
-[![License](https://img.shields.io/packagist/l/matheushack/laravel-modules.svg?style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
+[![License](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Frepo.packagist.org%2Fp2%2Fmatheushack%2Flaravel-modules.json&query=%24.packages%5B%22matheushack%2Flaravel-modules%22%5D%5B0%5D.license%5B0%5D&label=license&color=blue&style=flat-square)](https://packagist.org/packages/matheushack/laravel-modules)
 
 Gerador e carregador de módulos para Laravel. Cada módulo fica em `app/Modules` e traz controller, service, repository, filter, model, resource, requests, rotas e provider. O pacote registra os módulos ligados, carrega rotas e migrations e expõe comandos Artisan para criar o restante sob demanda.
 
