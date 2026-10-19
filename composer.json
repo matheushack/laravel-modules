@@ -3,7 +3,14 @@
     "description": "Gerador e carregador de módulos para Laravel.",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "keywords": [
+        "laravel",
+        "laravel-modules",
+        "modules",
+        "modular",
+        "artisan",
+        "generator"
+    ],
     "authors": [{
         "name": "Matheus Hack",
         "email": "matheushack90@gmail.com"
